@@ -12,12 +12,6 @@ const getOptions = async (): Promise<ConnectionOptions> => {
     type: "postgres",
     synchronize: true,
     logging: false,
-    extra: {
-      ssl: true,
-    },
-    ssl: {
-      rejectUnauthorized: true,
-    },
     entities: ["dist/entities/*.*"],
   };
 
