@@ -10,7 +10,8 @@ const router = Router();
 router.get("/", (req, res) =>
   res.json({
     message: "Hello Wegodev!",
-    author: "sap471",
+    author: "sap471 <https://github.com/sap471>",
+    repository: "https://github.com/sap471/wegodev-backend-challenge"
   })
 );
 
