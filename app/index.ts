@@ -4,6 +4,7 @@ dotenv.config();
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import morgan from "morgan";
 import { startDatabase } from "./database";
 import router from "./router";
 import { appPort } from "./utils/constans";
@@ -23,6 +24,7 @@ async function buildApp(): Promise<express.Application> {
       origin: "*",
     })
   );
+  app.use(morgan("dev"));
 
   app.use(router);
 

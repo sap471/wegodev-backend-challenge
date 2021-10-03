@@ -4,8 +4,6 @@ import {
   ConnectionOptions,
   createConnection,
 } from "typeorm";
-import { User } from "./entities/User";
-import { isDev } from "./utils/constans";
 
 const getOptions = async (): Promise<ConnectionOptions> => {
   let connectionOptions: ConnectionOptions;
@@ -20,8 +18,8 @@ const getOptions = async (): Promise<ConnectionOptions> => {
     entities: ["dist/entities/*.*"],
   };
 
-  if (process.env.DATABASE) {
-    Object.assign(connectionOptions, { url: process.env.DATABASE });
+  if (process.env.DATABASE_URL) {
+    Object.assign(connectionOptions, { url: process.env.DATABASE_URL });
   } else {
     connectionOptions = await getConnectionOptions();
   }
