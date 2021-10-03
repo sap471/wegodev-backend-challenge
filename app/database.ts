@@ -15,6 +15,9 @@ const getOptions = async (): Promise<ConnectionOptions> => {
     extra: {
       ssl: true,
     },
+    ssl: {
+      rejectUnauthorized: true,
+    },
     entities: ["dist/entities/*.*"],
   };
 
