@@ -16,7 +16,7 @@ export default (
     message = err.message;
   } else if (err instanceof ValidationError) {
     res.statusCode = 400;
-    message = err.toString();
+    message = err.toString()
   }
 
   return res.json({

@@ -1,4 +1,4 @@
-import { IsDate, IsDefined, IsEnum } from "class-validator";
+import { IsDefined, IsEnum } from "class-validator";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 export enum Gender {
